@@ -20,7 +20,7 @@ class UsersController extends Controller
               "<div class='chat_people' data-id='".$value->id."'>".
               "<div class='chat_img text-center'> ".User::generateInitials($value->name)."</div>".
               "<div class='chat_ib'>".
-              "<h5>".$value->name." <span class='chat_date'>".$value->messages->last()->updated_at->format('M d')."</span></h5></div></div></div>";
+              "<h5>".$value->name." <span class='chat_date'></span></h5></div></div></div>";
       }
         return response()->json(['html'=>$html]);
     }
